@@ -3,9 +3,6 @@ import chimpLogo from '../assets/chimpchat-logo.jpg';
 import merchantAvatar from '../assets/avatar-step2-merchant.jpg';
 import { 
   Instagram, 
-  Facebook, 
-  Twitter, 
-  MessageCircle, 
   ArrowRight, 
   Zap, 
   Sparkles,
@@ -21,9 +18,6 @@ export default function HowItWorks() {
   const [activeChannelIdx, setActiveChannelIdx] = useState(0);
   const channels = [
     { name: 'Instagram', icon: Instagram, color: 'text-[#DD2A7B]', bg: 'bg-[#DD2A7B]/10', handle: '@yourbrand.official' },
-    { name: 'WhatsApp', icon: MessageCircle, color: 'text-[#008444]', bg: 'bg-[#008444]/10', handle: '+1 (800) CHIMP-CHAT' },
-    { name: 'Facebook', icon: Facebook, color: 'text-[#1877F2]', bg: 'bg-[#1877F2]/10', handle: 'facebook.com/yourbrand' },
-    { name: 'Twitter (X)', icon: Twitter, color: 'text-[#241C15]', bg: 'bg-[#241C15]/10', handle: '@yourbrand on X' },
   ];
 
   // Step 3: Automation View Toggle (Menu vs Live Chat)
@@ -213,10 +207,10 @@ export default function HowItWorks() {
             {/* Step 2 Copy */}
             <div className="text-left space-y-1.5 px-1 min-h-[72px]">
               <h3 className="font-mc-serif text-xl sm:text-[22px] lg:text-[20px] xl:text-[22px] font-bold text-[#241C15] tracking-tight whitespace-nowrap">
-                Step 2: Connect to your channels
+                Step 2: Connect your Instagram
               </h3>
               <p className="text-xs sm:text-sm text-[#241C15]/75 font-normal leading-relaxed">
-                Link Instagram, Facebook, WhatsApp, or Twitter (X)
+                Link your Instagram account
               </p>
             </div>
 

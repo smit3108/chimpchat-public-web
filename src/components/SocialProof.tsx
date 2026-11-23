@@ -1,9 +1,6 @@
 import artisanPhoto from '../assets/story-artisan.jpg';
 import { 
   Instagram, 
-  Facebook,
-  Twitter,
-  MessageCircle,
   ShieldCheck, 
   Check, 
   ArrowRight,
@@ -34,72 +31,6 @@ export default function SocialProof() {
         'Live in-DM catalog browsing synced with Shopify',
         'Official Meta Graph API (100% zero shadowbans)'
       ]
-    },
-    {
-      id: 'facebook',
-      name: 'Facebook',
-      subtitle: 'Messenger & Page Posts',
-      icon: Facebook,
-      iconColor: 'text-[#1877F2]',
-      iconBg: 'bg-[#1877F2]/10 border-[#1877F2]/30',
-      topAccent: 'bg-[#1877F2]',
-      badge: 'Meta Graph API',
-      badgeColor: 'bg-[#FFFFFF] text-[#1877F2] border-[#1877F2]/40',
-      metric: '24/7 Ad Lead Capture',
-      microMockup: {
-        trigger: 'Post Comment / Messenger Ad Click',
-        action: 'Instant AI qualification & checkout card'
-      },
-      features: [
-        'Auto-reply to comments on Facebook Page posts',
-        'Instant lead qualification for Click-to-Messenger ads',
-        '24/7 tier-1 customer service answering product FAQs',
-        'Order confirmation & real-time delivery tracking'
-      ]
-    },
-    {
-      id: 'whatsapp',
-      name: 'WhatsApp Business',
-      subtitle: 'Cloud API & Catalogs',
-      icon: MessageCircle,
-      iconColor: 'text-[#008444]',
-      iconBg: 'bg-[#008444]/10 border-[#008444]/30',
-      topAccent: 'bg-[#008444]',
-      badge: 'Official Cloud API',
-      badgeColor: 'bg-[#FFE01B] text-[#241C15] border-[#241C15]',
-      metric: '98% Message Open Rate',
-      microMockup: {
-        trigger: '"Do you ship to Canada?"',
-        action: 'AI resolves shipping & stock in 1.2s'
-      },
-      features: [
-        'Interactive live product catalog browsing in chat',
-        '2-way conversational AI trained on store FAQs',
-        'Targeted broadcasts for VIP drops & restock alerts',
-        'Instant 1-tap reorders without leaving WhatsApp'
-      ]
-    },
-    {
-      id: 'twitter',
-      name: 'Twitter / X',
-      subtitle: 'Mentions & Direct Messages',
-      icon: Twitter,
-      iconColor: 'text-[#241C15]',
-      iconBg: 'bg-[#241C15]/10 border-[#241C15]/30',
-      topAccent: 'bg-[#241C15]',
-      badge: 'X Official API',
-      badgeColor: 'bg-[#FFFFFF] text-[#241C15] border-[#241C15]/40',
-      metric: '88% DM Open Rate',
-      microMockup: {
-        trigger: 'Tweet Reply: "SEND GUIDE"',
-        action: 'Auto-delivered PDF link directly in X DMs'
-      },
-      features: [
-        'Tweet reply to instant Direct Message lead delivery',
-        '@Mention automated rewards & discount codes',
-        'Capture verified emails and phone numbers inside DMs',
-        'Compliant rate-limited X Developer API routing'
-      ]
     }
   ];
 
@@ -108,15 +39,15 @@ export default function SocialProof() {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Top Meta & X Partner Trust Bar */}
+        {/* Instagram Partner Trust Bar */}
         <div className="flex flex-wrap items-center justify-between gap-6 pb-12 border-b border-[#241C15]/10 text-center sm:text-left">
           <div className="flex items-center gap-3 mx-auto sm:mx-0">
             <div className="w-10 h-10 rounded-xl bg-[#FFE01B] border-2 border-[#241C15] flex items-center justify-center text-[#241C15] shadow-mc-hard-sm">
               <ShieldCheck className="w-5 h-5" />
             </div>
             <div>
-              <p className="text-xs font-bold text-[#241C15]">Official Meta Graph & Twitter (X) API Partner</p>
-              <p className="text-[11px] text-[#241C15]/70">Zero shadowbans • Built strictly to Meta, Instagram & X developer terms of service</p>
+              <p className="text-xs font-bold text-[#241C15]">Official Meta Graph API Partner</p>
+              <p className="text-[11px] text-[#241C15]/70">Zero shadowbans • Built for Instagram developer terms of service</p>
             </div>
           </div>
 
@@ -133,18 +64,18 @@ export default function SocialProof() {
           </div>
         </div>
 
-        {/* Dedicated 4 Supported Platforms Spotlight Grid */}
+        {/* Dedicated Instagram Spotlight Grid */}
         <div className="mt-14 pt-2">
           <div className="text-center max-w-2xl mx-auto mb-10 space-y-2">
             <h3 className="font-mc-serif text-2xl sm:text-3xl font-normal text-[#241C15]">
-              Built exclusively for the <em className="italic underline decoration-[#FFE01B] decoration-4 underline-offset-4">Big 4 Social Channels</em>
+              Built exclusively for <em className="italic underline decoration-[#FFE01B] decoration-4 underline-offset-4">Instagram</em>
             </h3>
             <p className="text-sm text-[#241C15]/75">
-              100% official API integrations. We focus deeply on these four channels so your accounts remain secure, compliant, and lightning-fast.
+              100% official Instagram API integration. We focus deeply on Reels, Stories, posts, comments, and DMs.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 max-w-md mx-auto gap-6">
             {supportedChannels.map((channel, idx) => {
               const ChannelIcon = channel.icon;
               return (
