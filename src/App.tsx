@@ -4,9 +4,12 @@ import SocialProof from './components/SocialProof';
 import FeatureBreakdown from './components/FeatureBreakdown';
 import ProductAutomationStory from './components/ProductAutomationStory';
 import HowItWorks from './components/HowItWorks';
+import Solutions from './components/Solutions';
 
 export default function App() {
-  const isProductsPage = window.location.pathname.replace(/\/+$/, '') === '/products';
+  const currentPath = window.location.pathname.replace(/\/+$/, '') || '/';
+  const isProductsPage = currentPath === '/products';
+  const isSolutionsPage = currentPath === '/solutions';
 
   return (
     <div className="relative min-h-screen bg-[#ffffff] text-[#171717] flex flex-col selection:bg-[#ffe01b] selection:text-[#171717]">
@@ -15,7 +18,9 @@ export default function App() {
 
       {/* Main Page Flow */}
       <main className="flex-1">
-        {isProductsPage ? (
+        {isSolutionsPage ? (
+          <Solutions />
+        ) : isProductsPage ? (
           <>
             <FeatureBreakdown />
             <ProductAutomationStory />

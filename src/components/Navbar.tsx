@@ -25,7 +25,7 @@ export default function Navbar() {
 
   const navLinks: NavLinkItem[] = [
     { name: 'Product', href: '/products', hasDropdown: true },
-    { name: 'Solutions', href: '#solutions', hasDropdown: true },
+    { name: 'Solutions', href: '/solutions' },
     { name: 'Agencies', href: '#agencies' },
     { name: 'Pricing', href: '#pricing' },
     { name: 'Resources', href: '#faq' },
