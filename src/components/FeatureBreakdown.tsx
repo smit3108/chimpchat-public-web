@@ -144,21 +144,21 @@ export default function FeatureBreakdown() {
   ];
 
   return (
-    <section id="features" className="relative py-20 sm:py-28 bg-[#FFFFFF] border-t border-b border-[#241C15]/15 overflow-hidden">
+    <section id="features" className="relative py-20 sm:py-28 bg-[#ffffff] border-t border-b border-[#e7e5dc] overflow-hidden">
       
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header (Exact Match to User Photo) */}
         <div className="text-center max-w-3xl mx-auto mb-20 sm:mb-28 space-y-3">
-          <p className="text-xs sm:text-sm font-black uppercase tracking-[0.2em] text-[#007C89]">
+          <p className="text-xs sm:text-sm font-black uppercase tracking-[0.2em] text-[#55534b]">
             FEATURE FOCUS
           </p>
 
-          <h2 className="font-mc-serif text-4xl sm:text-6xl font-normal text-[#241C15] tracking-tight">
+          <h2 className="font-mc-serif text-4xl sm:text-6xl font-normal text-[#171717] tracking-tight">
             Feature Breakdown
           </h2>
 
-          <p className="text-base sm:text-lg text-[#241C15]/75 font-normal max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-[#55534b] font-normal max-w-2xl mx-auto leading-relaxed">
             Dive into the specifics of each feature, understanding its functionality and how it can elevate your Instagram strategy.
           </p>
         </div>
@@ -183,20 +183,20 @@ export default function FeatureBreakdown() {
                   <div className="relative w-full max-w-[340px] sm:max-w-[380px] py-4">
                     
                     {/* Ambient Glow / Warm Backing Shadow */}
-                    <div className="absolute -inset-2 bg-[#FBEEDB]/80 rounded-[48px] filter blur-xl opacity-70 -z-10" />
+                    <div className="absolute -inset-2 bg-[#f7f6f1] rounded-[48px] filter blur-xl opacity-70 -z-10" />
 
                     {/* Smartphone Mockup */}
-                    <div className="relative w-[230px] sm:w-[250px] rounded-[38px] border-[3px] border-[#241C15] bg-[#241C15] shadow-mc-hard-lg overflow-hidden z-10 text-white">
+                    <div className="relative w-[230px] sm:w-[250px] rounded-[38px] border-[3px] border-[#171717] bg-[#171717] shadow-mc-hard-lg overflow-hidden z-10 text-white">
                       
                       {/* Top Island / Camera Notch */}
-                      <div className="pt-2.5 pb-1 flex justify-center bg-black/40">
-                        <div className="w-16 h-3.5 bg-black rounded-full flex items-center justify-end pr-1.5">
-                          <div className="w-1.5 h-1.5 rounded-full bg-[#382C22]" />
+                      <div className="pt-2.5 pb-1 flex justify-center bg-[#171717]">
+                        <div className="w-16 h-3.5 bg-[#171717] rounded-full flex items-center justify-end pr-1.5">
+                          <div className="w-1.5 h-1.5 rounded-full bg-[#171717]" />
                         </div>
                       </div>
 
                       {/* Phone Screen Container */}
-                      <div className="relative h-[430px] sm:h-[460px] overflow-hidden flex flex-col justify-between bg-black">
+                      <div className="relative h-[430px] sm:h-[460px] overflow-hidden flex flex-col justify-between bg-[#171717]">
                         
                         {/* Background Media Image */}
                         <img 
@@ -204,27 +204,27 @@ export default function FeatureBreakdown() {
                           alt="" 
                           className="absolute inset-0 w-full h-full object-cover opacity-85"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/90 pointer-events-none" />
+                        <div className="absolute inset-0 bg-gradient-to-b from-[#171717]/50 via-transparent to-[#171717]/90 pointer-events-none" />
 
                         {/* Top Screen Bar */}
                         <div className="relative z-10 p-3 flex items-center justify-between text-xs">
-                          <div className="flex items-center gap-1.5 bg-black/40 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/20">
+                          <div className="flex items-center gap-1.5 bg-[#171717] backdrop-blur-md px-2.5 py-1 rounded-full border border-[#e7e5dc]">
                             <span className="text-[10px] font-bold text-white tracking-wider">
                               {item.phoneContent.overlayBadge}
                             </span>
                           </div>
-                          <span className="text-[10px] font-bold text-white/80">•••</span>
+                          <span className="text-[10px] font-bold text-[#ffffff]">•••</span>
                         </div>
 
                         {/* Middle Content Details */}
                         <div className="relative z-10 px-3.5 space-y-1.5">
                           <div className="flex items-center gap-2">
-                            <img src={item.phoneContent.avatar} alt="" className="w-5 h-5 rounded-full border border-white object-cover" />
+                            <img src={item.phoneContent.avatar} alt="" className="w-5 h-5 rounded-full border border-[#e7e5dc] object-cover" />
                             <span className="text-xs font-bold text-white drop-shadow-sm">
                               {item.phoneContent.author}
                             </span>
                           </div>
-                          <p className="text-[11px] text-white/90 leading-tight font-medium drop-shadow-sm line-clamp-2">
+                          <p className="text-[11px] text-[#ffffff] leading-tight font-medium drop-shadow-sm line-clamp-2">
                             {item.phoneContent.caption}
                           </p>
                         </div>
@@ -234,30 +234,30 @@ export default function FeatureBreakdown() {
                           
                           {/* Right Reel Action Icons (Heart, Comment, Share) */}
                           <div className="absolute -top-24 right-3 space-y-3 flex flex-col items-center">
-                            <button className="w-7 h-7 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-white border border-white/20">
-                              <Heart className="w-3.5 h-3.5 fill-[#E04838] text-[#E04838]" />
+                            <button className="w-7 h-7 rounded-full bg-[#171717] backdrop-blur-md flex items-center justify-center text-white border border-[#e7e5dc]">
+                              <Heart className="w-3.5 h-3.5 fill-[#8d2924] text-[#8d2924]" />
                             </button>
-                            <button className="w-7 h-7 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-white border border-white/20">
+                            <button className="w-7 h-7 rounded-full bg-[#171717] backdrop-blur-md flex items-center justify-center text-white border border-[#e7e5dc]">
                               <MessageCircle className="w-3.5 h-3.5" />
                             </button>
-                            <button className="w-7 h-7 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-white border border-white/20">
+                            <button className="w-7 h-7 rounded-full bg-[#171717] backdrop-blur-md flex items-center justify-center text-white border border-[#e7e5dc]">
                               <Send className="w-3.5 h-3.5" />
                             </button>
                           </div>
 
                           {/* Comment Pill */}
-                          <div className="bg-white/95 text-[#241C15] rounded-full p-2 px-3 border border-white flex items-center justify-between shadow-md">
+                          <div className="bg-[#ffffff] text-[#171717] rounded-full p-2 px-3 border border-[#e7e5dc] flex items-center justify-between shadow-md">
                             <span className="text-[10px] font-bold truncate pr-1">
                               {item.phoneContent.commentTrigger}
                             </span>
-                            <span className="w-4 h-4 rounded-full bg-[#FFE01B] border border-[#241C15] flex items-center justify-center text-[8px] font-bold text-[#241C15] flex-shrink-0">
+                            <span className="w-4 h-4 rounded-full bg-[#ffe01b] border border-[#171717] flex items-center justify-center text-[8px] font-bold text-[#171717] flex-shrink-0">
                               ➔
                             </span>
                           </div>
 
                           {/* Home Bar Indicator */}
                           <div className="flex justify-center pt-2">
-                            <div className="w-20 h-1 bg-white/40 rounded-full" />
+                            <div className="w-20 h-1 bg-[#ffffff] rounded-full" />
                           </div>
 
                         </div>
@@ -274,36 +274,36 @@ export default function FeatureBreakdown() {
                     >
                       <path 
                         d="M 10 90 C 70 90, 80 50, 95 10" 
-                        stroke="#241C15" 
+                        stroke="#171717" 
                         strokeWidth="2.5" 
                         strokeDasharray="4 4" 
                         strokeLinecap="round"
                       />
                       {/* Arrowhead / Circle */}
-                      <circle cx="10" cy="90" r="3.5" fill="#241C15" />
-                      <polygon points="90,12 98,6 100,16" fill="#241C15" />
+                      <circle cx="10" cy="90" r="3.5" fill="#171717" />
+                      <polygon points="90,12 98,6 100,16" fill="#171717" />
                     </svg>
 
                     {/* Overlapping Floating DM Card (Right Offset of Phone) */}
-                    <div className="absolute top-12 sm:top-14 right-0 sm:-right-4 w-[190px] sm:w-[210px] bg-white rounded-2xl border-2 border-[#241C15] shadow-mc-hard-lg p-3.5 z-30 space-y-2.5">
+                    <div className="absolute top-12 sm:top-14 right-0 sm:-right-4 w-[190px] sm:w-[210px] bg-white rounded-2xl border-2 border-[#171717] shadow-mc-hard-lg p-3.5 z-30 space-y-2.5">
                       
                       {/* Red Notification Badge "1" at top right */}
-                      <div className="absolute -top-2.5 -right-2.5 w-6 h-6 rounded-full bg-[#E04838] text-white font-black text-[11px] flex items-center justify-center border-2 border-white shadow-sm">
+                      <div className="absolute -top-2.5 -right-2.5 w-6 h-6 rounded-full bg-[#8d2924] text-white font-black text-[11px] flex items-center justify-center border-2 border-white shadow-sm">
                         1
                       </div>
 
                       {/* DM Card Profile Header */}
-                      <div className="flex items-center gap-2 pb-2 border-b border-[#241C15]/10">
+                      <div className="flex items-center gap-2 pb-2 border-b border-[#e7e5dc]">
                         <img 
                           src={item.dmCard.avatar} 
                           alt="" 
-                          className="w-7 h-7 rounded-full border border-[#241C15] object-cover flex-shrink-0" 
+                          className="w-7 h-7 rounded-full border border-[#171717] object-cover flex-shrink-0" 
                         />
                         <div className="min-w-0">
-                          <p className="text-[11px] font-bold text-[#241C15] truncate">
+                          <p className="text-[11px] font-bold text-[#171717] truncate">
                             {item.dmCard.title}
                           </p>
-                          <p className="text-[9px] text-[#241C15]/60 truncate">
+                          <p className="text-[9px] text-[#77756e] truncate">
                             {item.dmCard.subtitle}
                           </p>
                         </div>
@@ -311,18 +311,18 @@ export default function FeatureBreakdown() {
 
                       {/* Optional Media Preview Thumbnail */}
                       {item.dmCard.image && (
-                        <div className="h-20 rounded-xl overflow-hidden border border-[#241C15]/15">
+                        <div className="h-20 rounded-xl overflow-hidden border border-[#e7e5dc]">
                           <img src={item.dmCard.image} alt="" className="w-full h-full object-cover" />
                         </div>
                       )}
 
                       {/* DM Message Text */}
-                      <p className="text-[10px] text-[#241C15]/80 leading-relaxed font-medium">
+                      <p className="text-[10px] text-[#55534b] leading-relaxed font-medium">
                         {item.dmCard.message}
                       </p>
 
                       {/* Action CTA Button */}
-                      <button className="w-full py-2 bg-[#241C15] hover:bg-[#382C22] text-[#FFE01B] font-black text-[11px] rounded-xl border border-[#241C15] shadow-xs flex items-center justify-center gap-1 transition-all">
+                      <button className="w-full py-2 bg-[#171717] hover:bg-[#171717] text-[#ffe01b] font-black text-[11px] rounded-xl border border-[#171717] shadow-xs flex items-center justify-center gap-1 transition-all">
                         <span>{item.dmCard.btnText}</span>
                         <ExternalLink className="w-3 h-3" />
                       </button>
@@ -337,30 +337,30 @@ export default function FeatureBreakdown() {
                 <div className={`lg:col-span-6 space-y-4 text-left ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
                   
                   {/* Eyebrow Chip */}
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FBEEDB] border border-[#241C15]/15 text-[11px] font-bold text-[#241C15]">
-                    <Sparkles className="w-3.5 h-3.5 text-[#007C89]" />
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#f7f6f1] border border-[#e7e5dc] text-[11px] font-bold text-[#171717]">
+                    <Sparkles className="w-3.5 h-3.5 text-[#55534b]" />
                     <span>{item.eyebrow}</span>
                   </div>
 
                   {/* Main Feature Title (Bold and Clean from Photo) */}
-                  <h3 className="font-mc-serif text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#241C15] leading-[1.15] tracking-tight">
+                  <h3 className="font-mc-serif text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#171717] leading-[1.15] tracking-tight">
                     {item.title}
                   </h3>
 
                   {/* Paragraph Description */}
-                  <p className="text-base sm:text-lg text-[#241C15]/75 font-normal leading-relaxed max-w-xl">
+                  <p className="text-base sm:text-lg text-[#55534b] font-normal leading-relaxed max-w-xl">
                     {item.description}
                   </p>
 
                   {/* Feature Highlights Pills */}
-                  <div className="pt-2 flex flex-wrap items-center gap-2 text-xs font-bold text-[#241C15]">
-                    <span className="inline-flex items-center gap-1 bg-[#F6F6F4] border border-[#241C15]/15 px-3 py-1.5 rounded-full shadow-2xs">
+                  <div className="pt-2 flex flex-wrap items-center gap-2 text-xs font-bold text-[#171717]">
+                    <span className="inline-flex items-center gap-1 bg-[#f7f6f1] border border-[#e7e5dc] px-3 py-1.5 rounded-full shadow-2xs">
                       ⚡ Instant &lt; 2s Delivery
                     </span>
-                    <span className="inline-flex items-center gap-1 bg-[#F6F6F4] border border-[#241C15]/15 px-3 py-1.5 rounded-full shadow-2xs">
+                    <span className="inline-flex items-center gap-1 bg-[#f7f6f1] border border-[#e7e5dc] px-3 py-1.5 rounded-full shadow-2xs">
                       🛡️ 100% Meta Compliant
                     </span>
-                    <span className="inline-flex items-center gap-1 bg-[#F6F6F4] border border-[#241C15]/15 px-3 py-1.5 rounded-full shadow-2xs">
+                    <span className="inline-flex items-center gap-1 bg-[#f7f6f1] border border-[#e7e5dc] px-3 py-1.5 rounded-full shadow-2xs">
                       📈 3.4x Higher Conversion
                     </span>
                   </div>
