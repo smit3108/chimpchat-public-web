@@ -1,12 +1,7 @@
 import reelMedia from '../assets/feature-reel-fashion.jpg';
-import reelAvatar from '../assets/avatar-fashion.jpg';
 import postMedia from '../assets/feature-post-ceramics.jpg';
-import postAvatar from '../assets/avatar-potter.jpg';
 import storyMedia from '../assets/feature-story-cafe.jpg';
-import storyAvatar from '../assets/avatar-cafe.jpg';
 import mentionMedia from '../assets/feature-mention-ugc.jpg';
-import mentionAvatar from '../assets/avatar-customer.jpg';
-import chimpLogo from '../assets/chimpchat-logo.jpg';
 import { 
   Heart, 
   MessageCircle, 
@@ -23,17 +18,16 @@ interface FeatureItem {
   phoneType: 'reel' | 'post' | 'story' | 'mention';
   phoneContent: {
     author: string;
-    avatar: string;
+    avatarInitials: string;
     image: string;
     caption: string;
     commentTrigger: string;
     overlayBadge?: string;
   };
   dmCard: {
-    avatar: string;
+    initials: string;
     title: string;
     subtitle: string;
-    image?: string;
     message: string;
     btnText: string;
     btnLink?: string;
@@ -51,17 +45,16 @@ export default function FeatureBreakdown() {
       phoneType: 'reel',
       phoneContent: {
         author: 'myvoguishdiaries',
-        avatar: reelAvatar,
+        avatarInitials: 'MV',
         image: reelMedia,
         caption: 'RECENT & FAVOURITE Autumn collection purchases ✨ Trench & boots linked!',
         commentTrigger: 'Links please 😍😍😍',
         overlayBadge: 'Reels'
       },
       dmCard: {
-        avatar: reelAvatar,
+        initials: 'MV',
         title: 'myvoguishdiaries',
         subtitle: '130k followers • Official Store',
-        image: reelMedia,
         message: 'Hey babe! Tap below to shop the exact camel trench coat from my Reel with 20% off:',
         btnText: 'Shop Autumn Look'
       }
@@ -76,17 +69,16 @@ export default function FeatureBreakdown() {
       phoneType: 'post',
       phoneContent: {
         author: 'atelier.earthware',
-        avatar: postAvatar,
+        avatarInitials: 'AE',
         image: postMedia,
         caption: 'Speckled oat stoneware batch is finally live! Comment LINK to claim yours ☕',
         commentTrigger: 'Link please!',
         overlayBadge: 'Post Drop'
       },
       dmCard: {
-        avatar: postAvatar,
+        initials: 'AE',
         title: 'Atelier Earthware',
         subtitle: 'Artisan Pottery Studio',
-        image: postMedia,
         message: 'Here is your direct VIP access link to the speckled stoneware batch + free shipping:',
         btnText: 'Claim Fresh Pottery'
       }
@@ -101,17 +93,16 @@ export default function FeatureBreakdown() {
       phoneType: 'story',
       phoneContent: {
         author: 'dailybrew.cafe',
-        avatar: storyAvatar,
+        avatarInitials: 'DB',
         image: storyMedia,
         caption: 'Fresh morning bakes & iced brew! Reply MENU for today\'s secret specials 🥐',
         commentTrigger: 'Menu',
         overlayBadge: 'Stories'
       },
       dmCard: {
-        avatar: storyAvatar,
+        initials: 'DB',
         title: 'Daily Brew Cafe',
         subtitle: 'Specialty Roastery • Open Now',
-        image: storyMedia,
         message: 'Good morning! Here is today\'s secret weekend brunch menu & your 10% coupon:',
         btnText: 'View Brunch Specials'
       }
@@ -126,17 +117,16 @@ export default function FeatureBreakdown() {
       phoneType: 'mention',
       phoneContent: {
         author: 'claire.living',
-        avatar: mentionAvatar,
+        avatarInitials: 'CL',
         image: mentionMedia,
         caption: 'Obsessed with my fresh order from @everglow.botanicals! The packaging is divine ✨',
         commentTrigger: 'Tagged you in their Story',
         overlayBadge: 'Story Tag'
       },
       dmCard: {
-        avatar: chimpLogo,
+        initials: 'EB',
         title: 'Everglow Botanicals',
         subtitle: 'Automated VIP Rewards',
-        image: mentionMedia,
         message: 'Claire, thank you so much for tagging us! As a token of our love, here is a 20% VIP gift code:',
         btnText: 'Claim 20% VIP Gift'
       }
@@ -219,7 +209,12 @@ export default function FeatureBreakdown() {
                         {/* Middle Content Details */}
                         <div className="relative z-10 px-3.5 space-y-1.5">
                           <div className="flex items-center gap-2">
-                            <img src={item.phoneContent.avatar} alt="" className="w-5 h-5 rounded-full border border-[#e7e5dc] object-cover" />
+                            <span
+                              aria-hidden="true"
+                              className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-[#e7e5dc] bg-[#ffe01b] text-[7px] font-black text-[#171717]"
+                            >
+                              {item.phoneContent.avatarInitials}
+                            </span>
                             <span className="text-xs font-bold text-white drop-shadow-sm">
                               {item.phoneContent.author}
                             </span>
@@ -294,11 +289,12 @@ export default function FeatureBreakdown() {
 
                       {/* DM Card Profile Header */}
                       <div className="flex items-center gap-2 pb-2 border-b border-[#e7e5dc]">
-                        <img 
-                          src={item.dmCard.avatar} 
-                          alt="" 
-                          className="w-7 h-7 rounded-full border border-[#171717] object-cover flex-shrink-0" 
-                        />
+                        <span
+                          aria-hidden="true"
+                          className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full border border-[#171717] bg-[#ffe01b] text-[9px] font-black text-[#171717]"
+                        >
+                          {item.dmCard.initials}
+                        </span>
                         <div className="min-w-0">
                           <p className="text-[11px] font-bold text-[#171717] truncate">
                             {item.dmCard.title}
@@ -308,13 +304,6 @@ export default function FeatureBreakdown() {
                           </p>
                         </div>
                       </div>
-
-                      {/* Optional Media Preview Thumbnail */}
-                      {item.dmCard.image && (
-                        <div className="h-20 rounded-xl overflow-hidden border border-[#e7e5dc]">
-                          <img src={item.dmCard.image} alt="" className="w-full h-full object-cover" />
-                        </div>
-                      )}
 
                       {/* DM Message Text */}
                       <p className="text-[10px] text-[#55534b] leading-relaxed font-medium">

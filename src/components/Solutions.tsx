@@ -16,18 +16,18 @@ import {
 } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import reelAvatar from '../assets/avatar-fashion.jpg';
-import storyImage from '../assets/feature-story-cafe.jpg';
+import storyImage from '../assets/solution-cafe-brunch.jpg';
 import storyAvatar from '../assets/avatar-cafe.jpg';
-import mentionImage from '../assets/feature-mention-ugc.jpg';
+import mentionImage from '../assets/solution-shop-unboxing.jpg';
 import mentionAvatar from '../assets/avatar-customer.jpg';
-import potteryImage from '../assets/feature-post-ceramics.jpg';
+import potteryImage from '../assets/solution-pottery-craft.jpg';
 import potteryAvatar from '../assets/avatar-potter.jpg';
-import creatorStudioImage from '../assets/creator-content-studio.jpg';
-import heroAvatar from '../assets/avatar-step2-merchant.jpg';
-import roasterImage from '../assets/story-artisan.jpg';
-import beautyImage from '../assets/feature-beauty-wellness.jpg';
-import fitnessImage from '../assets/feature-fitness-coaching.jpg';
-import eventsImage from '../assets/feature-live-events.jpg';
+import creatorStudioImage from '../assets/solution-creator-lifestyle.jpg';
+import heroAvatar from '../assets/avatar-roaster-founder.jpg';
+import roasterImage from '../assets/solutions-coffee-roaster.jpg';
+import beautyImage from '../assets/solution-beauty-spa.jpg';
+import fitnessImage from '../assets/solution-fitness-trainer.jpg';
+import eventsImage from '../assets/solution-live-concert.jpg';
 import InstagramBrandMark from './InstagramBrandMark';
 
 interface BusinessSolution {

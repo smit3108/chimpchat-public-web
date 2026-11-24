@@ -8,12 +8,9 @@ import {
   Send,
   Sparkles,
 } from 'lucide-react';
-import reelImage from '../assets/feature-reel-fashion.jpg';
-import reelAvatar from '../assets/avatar-fashion.jpg';
-import storyImage from '../assets/feature-story-cafe.jpg';
-import storyAvatar from '../assets/avatar-cafe.jpg';
-import mentionImage from '../assets/feature-mention-ugc.jpg';
-import mentionAvatar from '../assets/avatar-customer.jpg';
+import reelImage from '../assets/story-fashion-shopper.jpg';
+import storyImage from '../assets/story-cafe-owner.jpg';
+import mentionImage from '../assets/story-customer-unboxing.jpg';
 import InstagramBrandMark from './InstagramBrandMark';
 
 const stories = [
@@ -25,9 +22,9 @@ const stories = [
     description:
       'When someone asks about a product, send the details and a useful next step while they are still interested.',
     handle: 'wearwell.studio',
-    avatar: reelAvatar,
+    replyInitial: 'W',
     image: reelImage,
-    imageAlt: 'A featured fashion look from a boutique Instagram Reel',
+    imageAlt: 'A fashion shopper browsing a boutique while using her phone',
     trigger: 'Does this come in other colors?',
     reply: 'It does. Here are the shades and fit notes you asked for.',
     action: 'Explore the colors',
@@ -41,9 +38,9 @@ const stories = [
     description:
       'Answer Story replies with the menu, offer or link people are looking for, without making them wait.',
     handle: 'dailybrew.cafe',
-    avatar: storyAvatar,
+    replyInitial: 'D',
     image: storyImage,
-    imageAlt: 'A fresh drink from a cafe Instagram Story',
+    imageAlt: 'A cafe owner checking a message at his counter',
     trigger: 'Can I get the weekend menu?',
     reply: 'Of course. Here is the weekend menu, ready to browse.',
     action: 'Open the weekend menu',
@@ -57,9 +54,9 @@ const stories = [
     description:
       'Share clear answers to common questions automatically, so you can focus on the conversations that need you.',
     handle: 'everglow.goods',
-    avatar: mentionAvatar,
+    replyInitial: 'E',
     image: mentionImage,
-    imageAlt: 'A customer sharing a favorite product in an Instagram Story',
+    imageAlt: 'A customer opening a package from a small business',
     trigger: 'How long does delivery take?',
     reply: 'Most orders arrive in 2–4 days. Here is the full delivery guide.',
     action: 'View delivery details',
@@ -209,11 +206,12 @@ export default function ProductAutomationStory() {
                     </p>
                   </div>
                   <div className="flex items-start gap-2">
-                    <img
-                      src={story.avatar}
-                      alt=""
-                      className="mt-1 h-6 w-6 rounded-full object-cover"
-                    />
+                    <span
+                      aria-hidden="true"
+                      className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#ffe01b] text-[10px] font-black text-[#171717]"
+                    >
+                      {story.replyInitial}
+                    </span>
                     <div className="max-w-[88%] rounded-2xl rounded-tl-sm bg-[#f7f6f1] p-3 text-[11px] leading-relaxed text-[#171717]">
                       <p>{story.reply}</p>
                       <div className="mt-2 flex items-center justify-between gap-3 rounded-xl bg-[#ffe01b] px-3 py-2 font-bold">

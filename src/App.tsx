@@ -3,6 +3,7 @@ import Hero from './components/Hero';
 import SocialProof from './components/SocialProof';
 import FeatureBreakdown from './components/FeatureBreakdown';
 import ProductAutomationStory from './components/ProductAutomationStory';
+import InstagramUseCases from './components/InstagramUseCases';
 import HowItWorks from './components/HowItWorks';
 import Solutions from './components/Solutions';
 
@@ -24,6 +25,7 @@ export default function App() {
           <>
             <FeatureBreakdown />
             <ProductAutomationStory />
+            <InstagramUseCases />
           </>
         ) : (
           <>
