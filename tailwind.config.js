@@ -8,40 +8,48 @@ export default {
     extend: {
       colors: {
         mc: {
-          yellow: '#FFE01B',        // Signature Mailchimp Cavendish Yellow
-          'yellow-hover': '#F5D700',
-          dark: '#241C15',          // Signature Mailchimp Peppercorn / Espresso Black
-          bg: '#F6F6F4',            // Mailchimp Warm Off-White / Alabaster
-          card: '#FFFFFF',
-          warm: '#FBEEDB',          // Mailchimp Peach / Oat Warm Highlight
-          sand: '#EDEBE3',          // Neutral Divider Sand
-          teal: '#007C89',          // Mailchimp Teal
-          coral: '#E04838',         // Mailchimp Coral
-          green: '#008444',         // Mailchimp Forest Green
-          purple: '#A15D98',        // Mailchimp Plum Purple
-          border: '#241C15',
-          muted: '#59524C',
-          subtle: 'rgba(36, 28, 21, 0.14)',
+          yellow: '#ffe01b',
+          'yellow-hover': '#efd000',
+          dark: '#171717',
+          bg: '#f7f6f1',
+          card: '#ffffff',
+          warm: '#f7f6f1',
+          sand: '#e7e5dc',
+          teal: '#55534b',
+          coral: '#8d2924',
+          green: '#315d3b',
+          purple: '#55534b',
+          border: '#e7e5dc',
+          muted: '#55534b',
+          subtle: '#e7e5dc',
         },
         brand: {
-          yellow: '#FFE01B',
-          'yellow-hover': '#F5D700',
-          dark: '#241C15',
-          bg: '#F6F6F4',
-          card: '#FFFFFF',
-          muted: '#59524C',
+          yellow: '#ffe01b',
+          'yellow-hover': '#efd000',
+          ink: '#171717',
+          'soft-ink': '#55534b',
+          'muted-ink': '#77756e',
+          white: '#ffffff',
+          border: '#e7e5dc',
+          surface: '#f7f6f1',
+          success: '#315d3b',
+          'success-surface': '#edf5eb',
+          error: '#8d2924',
+          'error-surface': '#fbefed',
+          info: '#55534b',
+          warning: '#8a6400',
         }
       },
       fontFamily: {
-        serif: ['Fraunces', 'Georgia', 'serif'],
-        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+        serif: ['Alga', 'Iowan Old Style', 'Palatino Linotype', 'Georgia', 'serif'],
+        sans: ['Alga', 'Iowan Old Style', 'Palatino Linotype', 'Georgia', 'serif'],
       },
       boxShadow: {
-        'mc-card': '0 4px 20px rgba(36, 28, 21, 0.06)',
-        'mc-hover': '0 8px 30px rgba(36, 28, 21, 0.12)',
-        'mc-hard': '4px 4px 0px #241C15',
-        'mc-hard-sm': '2px 2px 0px #241C15',
-        'mc-hard-lg': '6px 6px 0px #241C15',
+        'mc-card': '0 4px 20px rgba(23, 23, 23, 0.06)',
+        'mc-hover': '0 8px 30px rgba(23, 23, 23, 0.12)',
+        'mc-hard': '4px 4px 0px #171717',
+        'mc-hard-sm': '2px 2px 0px #171717',
+        'mc-hard-lg': '6px 6px 0px #171717',
       },
       keyframes: {
         marquee: {

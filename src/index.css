@@ -4,36 +4,66 @@
 
 :root {
   color-scheme: light;
+  --brand-yellow: #ffe01b;
+  --brand-yellow-hover: #efd000;
+  --ink: #171717;
+  --soft-ink: #55534b;
+  --muted-ink: #77756e;
+  --white: #ffffff;
+  --border: #e7e5dc;
+  --neutral-surface: #f7f6f1;
+  --success: #315d3b;
+  --success-surface: #edf5eb;
+  --error: #8d2924;
+  --error-surface: #fbefed;
+  --info: #55534b;
+  --warning: #8a6400;
+  --font-alga: 'Alga', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+  --button-primary-background: var(--brand-yellow);
+  --button-primary-foreground: var(--ink);
+  --button-primary-border: var(--ink);
+  --button-primary-hover-background: var(--brand-yellow-hover);
+  --button-dark-background: var(--ink);
+  --button-dark-foreground: var(--white);
+  --button-dark-border: var(--ink);
+  --button-outline-background: transparent;
+  --button-outline-foreground: var(--ink);
+  --button-outline-border: var(--ink);
+  --button-outline-hover-background: var(--ink);
+  --button-outline-hover-foreground: var(--white);
 }
 
 body {
-  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background-color: #F6F6F4;
-  color: #241C15;
+  font-family: var(--font-alga);
+  background-color: var(--white);
+  color: var(--ink);
 }
 
-/* Mailchimp Editorial Typography Utilities */
 .font-mc-serif {
-  font-family: 'Fraunces', Georgia, serif;
+  font-family: var(--font-alga);
 }
 
-/* Mailchimp Signature Pill Button Styles */
 .mc-btn-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background-color: #FFE01B;
-  color: #241C15;
-  border: 1px solid #241C15;
+  background-color: var(--button-primary-background);
+  color: var(--button-primary-foreground);
+  border: 1px solid var(--button-primary-border);
   border-radius: 9999px;
   font-weight: 700;
   transition: all 0.2s ease;
 }
 
-.mc-btn-primary:hover {
-  background-color: #F5D700;
+.mc-btn-signup:hover {
+  background-color: var(--button-primary-hover-background);
   transform: translateY(-1px);
+}
+
+.mc-btn-signup:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
 }
 
 .mc-btn-dark {
@@ -41,16 +71,16 @@ body {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background-color: #241C15;
-  color: #FFFFFF;
-  border: 1px solid #241C15;
+  background-color: var(--button-dark-background);
+  color: var(--button-dark-foreground);
+  border: 1px solid var(--button-dark-border);
   border-radius: 9999px;
   font-weight: 700;
   transition: all 0.2s ease;
 }
 
 .mc-btn-dark:hover {
-  background-color: #3b2f24;
+  background-color: var(--button-dark-background);
   transform: translateY(-1px);
 }
 
@@ -59,45 +89,180 @@ body {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background-color: transparent;
-  color: #241C15;
-  border: 1px solid #241C15;
+  background-color: var(--button-outline-background);
+  color: var(--button-outline-foreground);
+  border: 1px solid var(--button-outline-border);
   border-radius: 9999px;
   font-weight: 700;
   transition: all 0.2s ease;
 }
 
 .mc-btn-outline:hover {
-  background-color: #241C15;
-  color: #FFFFFF;
+  background-color: var(--button-outline-hover-background);
+  color: var(--button-outline-hover-foreground);
   transform: translateY(-1px);
 }
 
-/* Mailchimp Card Utility */
 .mc-card {
-  background-color: #FFFFFF;
-  border: 1px solid rgba(36, 28, 21, 0.12);
+  background-color: var(--white);
+  border: 1px solid var(--border);
   border-radius: 1rem;
-  box-shadow: 0 4px 20px rgba(36, 28, 21, 0.05);
+  box-shadow: 0 4px 20px rgba(23, 23, 23, 0.05);
   transition: all 0.25s ease;
 }
 
 .mc-card:hover {
-  border-color: #241C15;
-  box-shadow: 0 10px 25px rgba(36, 28, 21, 0.09);
+  border-color: var(--ink);
+  box-shadow: 0 10px 25px rgba(23, 23, 23, 0.09);
 }
 
-/* Custom Scrollbar in Warm Espresso Tone */
+/* Keep the Instagram logo's official gradient independent of the site palette. */
+.instagram-brand-mark {
+  background: linear-gradient(45deg, #FCAF45 0%, #E1306C 50%, #833AB4 100%);
+}
+
+.product-menu-orbit {
+  animation: product-orbit 14s linear infinite;
+}
+
+.product-showcase-panel {
+  background-image:
+    radial-gradient(ellipse at 92% 10%, rgba(255, 224, 27, 0.12), transparent 34%),
+    radial-gradient(ellipse at 8% 95%, rgba(255, 224, 27, 0.12), transparent 38%);
+}
+
+.product-workflow-node {
+  animation: product-node-in 650ms ease-out;
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.product-workflow-node:hover {
+  transform: translateY(-3px);
+  box-shadow: 3px 6px 0 rgba(23, 23, 23, 0.14);
+}
+
+.product-workflow-action {
+  animation-delay: 120ms;
+}
+
+.product-workflow-outcome {
+  animation-delay: 240ms;
+}
+
+.product-flow-dot {
+  animation: product-flow-pulse 1.8s ease-out infinite;
+}
+
+.product-phone-preview {
+  animation: product-phone-float 6s ease-in-out infinite;
+}
+
+.product-story-section {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+.product-story-glow {
+  background: radial-gradient(ellipse at 75% 45%, rgba(255, 224, 27, 0.1), transparent 42%);
+}
+
+.product-story-orbit {
+  animation: product-orbit 26s linear infinite;
+}
+
+.product-story-preview {
+  animation: product-story-enter 450ms ease-out both;
+}
+
+.product-story-progress-fill {
+  animation: product-story-progress linear both;
+}
+
+@keyframes product-story-enter {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.99);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes product-story-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes product-node-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes product-flow-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 224, 27, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 7px rgba(255, 224, 27, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 224, 27, 0);
+  }
+}
+
+@keyframes product-phone-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+@keyframes product-orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .product-menu-orbit,
+  .product-story-orbit,
+  .product-story-preview,
+  .product-story-progress-fill,
+  .product-workflow-node,
+  .product-flow-dot,
+  .product-phone-preview {
+    animation: none;
+  }
+
+  .product-workflow-node {
+    transition: none;
+  }
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #F6F6F4;
+  background: var(--neutral-surface);
 }
 ::-webkit-scrollbar-thumb {
-  background: #D8D6CE;
+  background: var(--border);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #FFE01B;
+  background: var(--brand-yellow);
 }
